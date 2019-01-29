@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+    image: gogs/gogs:${GOGS_VERSION:-latest}
+    container_name: gogs
+    restart: on-failure
+    ports:
+      - ${GOGS_WEB_PORT:-10080}:3000
+    volumes:
+      - ${GOGS_DATA_DIR:-/var/gogs}:/data
+    depends_on:
+      - db
+  db:
+    image: mysql:${MYSQL_VERSION:-latest}
+    container_name: gogs-mysql
+    restart: on-failure
+    volumes:
+      - ${GOGS_DB_DIR:-/var/gogs/db}:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-gogs}
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
