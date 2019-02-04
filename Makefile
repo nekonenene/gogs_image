@@ -1,14 +1,14 @@
 .PHONY: init
-init: init_env init_dir
+init:
+	$(MAKE) clean
+	cp default.env .env
 
-.PHONY: init_env
-init_env:
-	cp -i default.env .env
-
-.PHONY: init_dir
-init_dir:
-	mkdir -p ./data/db
+.PHONY: run
+run:
+	docker-compose up
 
 .PHONY: clean
 clean:
-	rm -rf ./data
+	rm -rf data
+	mkdir -p data/db
+	touch data/.keep data/db/.keep
