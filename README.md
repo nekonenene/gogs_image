@@ -11,3 +11,8 @@ docker-compose up
 で開始できます。
 
 default.env から特に設定を変更していなければ、 localhost:10080 でWebアプリにアクセスできます。
+
+
+## Thanks!
+
+とても参考になりました https://github.com/nanoninja/docker-gogs-mysql
