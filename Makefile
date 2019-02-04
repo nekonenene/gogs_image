@@ -9,6 +9,5 @@ run:
 
 .PHONY: clean
 clean:
-	rm -rf data
-	mkdir -p data/db
-	touch data/.keep data/db/.keep
+	rm -rf data db
+	mkdir data db
