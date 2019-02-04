@@ -21,6 +21,7 @@ default.env から特に設定を変更していなければ、 localhost:10080 
 - ユーザ: MYSQL_USER で指定した値
 - パスワード: MYSQL_PASSWORD で指定した値
 - データベース名: gogs （MYSQL_DATABASE の値）
+- 実行ユーザ: gogs container においてアクセス権限を持つユーザ名は git なのでそのままに
 - ドメイン: サブドメインを含む hostname の意味合いで入力
 - SSH ポート: あくまで外から見たときのポート番号なので、GOGS_SSH_PORT の値を入力
 - HTTP ポート: 3000 を入力
