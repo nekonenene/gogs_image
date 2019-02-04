@@ -5,7 +5,7 @@ init:
 
 .PHONY: run
 run:
-	docker-compose up --project-name gogs
+	docker-compose up
 
 .PHONY: clean
 clean:
