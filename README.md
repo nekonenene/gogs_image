@@ -23,7 +23,7 @@ default.env から特に設定を変更していなければ、 localhost:10080 
 - データベース名: gogs （MYSQL_DATABASE の値）
 - ドメイン: サブドメインを含む hostname の意味合いで入力
 - SSH ポート: あくまで外から見たときのポート番号なので、GOGS_SSH_PORT の値を入力
-- HTTP ポート: 同様に GOGS_WEB_PORT の値を入力
+- HTTP ポート: 3000 を入力
 - アプリケーションの URL: トップページのURLを入力。例えば http://localhost:10080/
 
 あとはそのままでいいですが、身内用に公開する場合は、  
