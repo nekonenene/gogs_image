@@ -1,5 +1,11 @@
 .env*
 
+data/*
+!data/.keep
+data/db/*
+!data/db/.keep
+
+
 ### https://raw.github.com/github/gitignore/f908e51bcf38ae5ede449c55189a7b25d8c507cc/Global/macOS.gitignore
 
 # General
