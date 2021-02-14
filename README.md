@@ -5,7 +5,7 @@ Gogs と MySQL がセットになっています。
 `default.env` を参考に `.env` ファイルを作成後、
 
 ```sh
-docker-compose up --project-name gogs
+make run
 ```
 
 で開始できます。
