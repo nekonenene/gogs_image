@@ -10,8 +10,9 @@ make run
 
 で開始できます。
 
-default.env から特に設定を変更していなければ、 localhost:10080 でWebアプリにアクセスできます。
+default.env から特に設定を変更していなければ、 http://localhost:10080 でWebアプリにアクセスできます。
 
+ログは ${GOGS_DATA_DIR}/gogs/log に吐かれます。
 
 ## 設定例
 
