@@ -3,7 +3,6 @@ services:
   app:
     env_file: .env
     image: gogs/gogs:${GOGS_VERSION:-latest}
-    container_name: gogs
     restart: on-failure
     ports:
       - ${GOGS_WEB_PORT}:3000
@@ -19,7 +18,6 @@ services:
       context: ./mysql
       args:
         MYSQL_VERSION: ${MYSQL_VERSION:-latest}
-    container_name: gogs-mysql
     restart: on-failure
     volumes:
       - ${GOGS_DB_DIR}:/var/lib/mysql
