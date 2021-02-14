@@ -10,6 +10,7 @@ services:
       - ${GOGS_SSH_PORT}:22
     volumes:
       - ${GOGS_DATA_DIR}:/data
+      - ${GOGS_LOG_DIR}:/app/gogs/log
     depends_on:
       - db
   db:
